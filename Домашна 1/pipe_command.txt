@@ -1,0 +1,8 @@
+# Од фајлот macedonia-latest.osm, кој ги содржи сите податоци за Македонија, ги влечеме податоците.
+Тоа го правиме со помош на алатките osmfilter и osmconvert. Филтер користиме за да ги изфилтрираме станиците за полнење на електрични возила
+од macedonia-latest.osm, а конверторот го користиме за податоците да се запишат во наша локална база со .csv формат.
+
+
+C:\Users\Darko\DIANS>osmfilter macedonia-latest.osm_01.osm --keep="amenity=charging_station" | osmconvert64-0.8.8p.exe 
+- --all-to-nodes --csv="@id @lon @lat name operator capacity fee payment:free socket:type2:output" 
+--csv-headline --csv-separator="," -o="E-Park.csv"
