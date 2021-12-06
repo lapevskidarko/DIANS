@@ -1,0 +1,15 @@
+User GUI:
+-show cities
+-display map
+-draw route
+
+Navigation Service
+-Compute route
+-Search
+
+City Info Holder
+-Add City/station
+
+Database:
+-Fetch information
+-Store information
