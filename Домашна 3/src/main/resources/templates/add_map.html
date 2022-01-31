@@ -1,0 +1,30 @@
+<th:block>
+    <div class="row" style="margin-top: 1%;">
+        <div id="osm-map" class="col-lg-6" style="position: absolute;height: 75%;width: 70%;margin-left:5%;"></div>
+        <div class="col-lg-6">
+            <form th:action="@{/stations/new_location}" th:method="POST" style="z-index: 1000; color: whitesmoke; position: relative;float: right;left: 100%;">
+                <label for="cord">Current coordinates</label>
+                <input type="text" readonly="readonly" th:name="cord" style="color:brown;" id="cord">
+                <br>
+                <label for="name">Name of station: </label>
+                <input type="text" style="color: brown" id="name" th:name="name">
+                <br>
+                <label for="operatorName">Operator: </label>
+                <input type="text" id="operatorName" style="color: brown" th:name="operatorName">
+                <br>
+                <div>
+                    <input type="radio" th:if="${types}"
+                           th:each="type : ${types}"
+                           th:name="type"
+                           th:value="${type}"
+                           th:text="${type.name()}">
+                </div>
+                <input type="hidden" th:name="city" id="city">
+                <input type="submit" value="Submit" style="color: brown;">
+            </form>
+        </div>
+    </div>
+    <script>
+        showLatLng();
+    </script>
+</th:block>

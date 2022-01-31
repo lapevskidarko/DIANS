@@ -1,0 +1,13 @@
+<th:block>
+    <div style="margin-left: 30%;">
+        <label for="filter" style="color: whitesmoke;">Search stations by city: </label>
+        <input type="text" id="filter" style="color: brown;">
+        <button onclick="mapUpdate()">Search</button>
+    </div>
+    <div id="box">
+        <div id="osm-map" class="leaflet-container" style="position: absolute;height: 80%;width: 95%;margin-top: 1%;margin-left: 2.5%;"></div>
+    </div>
+    <script>
+        mapView();
+    </script>
+</th:block>
